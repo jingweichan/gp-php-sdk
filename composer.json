@@ -1,0 +1,23 @@
+{
+  "name": "lesterchan/gp-php-sdk",
+  "description": "The GP SDK for PHP provides a native interface to the GP API.",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Lester Chan",
+      "email": "lesterchan@gmail.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "php": "^7.2",
+    "ext-json": "^1.7",
+    "guzzlehttp/guzzle": "^6.3@dev"
+  },
+  "autoload": {
+    "psr-4": {
+      "GP\\": "src/"
+    }
+  }
+}
