@@ -120,8 +120,8 @@ abstract class GP
         $this->clientSecret = $clientSecret;
         $this->merchantId = $merchantId;
 
-        $this->stagingApiUrl = base64_decode('aHR0cHM6Ly9wYXJ0bmVyLWFwaS5zdGctbXl0ZWtzaS5jb20=');
-        $this->productionApiUrl = base64_decode('aHR0cHM6Ly9wYXJ0bmVyLWFwaS5ncmFiLmNvbQ==');
+        $this->setStagingApiUrl(base64_decode('aHR0cHM6Ly9wYXJ0bmVyLWFwaS5zdGctbXl0ZWtzaS5jb20='));
+        $this->setProductionApiUrl(base64_decode('aHR0cHM6Ly9wYXJ0bmVyLWFwaS5ncmFiLmNvbQ=='));
 
         $this->oauth2Path = base64_decode('L2dyYWJpZC92MS9vYXV0aDI=');
         $this->partnerV1Path = base64_decode('L2dyYWJwYXkvcGFydG5lci92MQ==');
@@ -148,6 +148,26 @@ abstract class GP
     public function setCurrency(string $currency): void
     {
         $this->currency = $currency;
+    }
+
+    /**
+     * Set Staging API URL.
+     *
+     * @param string $apiUrl Staging API URL
+     */
+    public function setStagingApiUrl(string $apiUrl): void
+    {
+        $this->stagingApiUrl = $apiUrl;
+    }
+
+    /**
+     * Set Production API URL.
+     *
+     * @param string $apiUrl Production API URL
+     */
+    public function setProductionApiUrl(string $apiUrl): void
+    {
+        $this->productionApiUrl = $apiUrl;
     }
 
     /**
