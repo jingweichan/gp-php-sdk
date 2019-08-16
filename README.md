@@ -126,17 +126,13 @@ $gp->checkChargeStatus($accessToken, $txId);
  */
 $gp->refund($accessToken, $txId, $groupTxId, $originTxID, $amount, $description);
 ```
-### Refund a full or partial refunds for a specific transaction.
+### Check the status of a refund transaction.
 ```php
 /**
  * @param string $accessToken OAuth access token
  * @param string $txId order ID
- * @param string $groupTxId partner transaction ID
- * @param string $originTxID original partner transaction ID
- * @param int $amount ​Transaction amount as integer
- * @param string $description description of the charge (optional)
  */
-$gp->refund($accessToken, $txId, $groupTxId, $originTxID, $amount, $description);
+$gp->checkRefundStatus($accessToken, $txId);
 ```
 
 ## POS
