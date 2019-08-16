@@ -209,7 +209,7 @@ abstract class GP
             'client_id' => $this->clientId,
             'code_challenge' => $this->generateCodeChallenge($codeVerifier),
             'code_challenge_method' => 'S256',
-            'nonce' => $this->generateNonce(16),
+            'nonce' => $this->generateNonce(),
             'redirect_uri' => $redirectUri,
             'request' => $requestToken,
             'response_type' => 'code',
@@ -250,7 +250,7 @@ abstract class GP
      *
      * @return string
      */
-    public function generateNonce(int $length = 32): string
+    public function generateNonce(int $length = 16): string
     {
         try {
             return bin2hex(random_bytes($length));
