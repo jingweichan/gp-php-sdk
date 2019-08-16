@@ -130,7 +130,7 @@ abstract class GP
 
     /**
      * Set country code (alpha-2).
-     * Accepted values are SG, MY, VN, and PH.
+     * Accepted values are SG, MY, VN, PH, and TH.
      *
      * @param string $countryCode Country code
      */
@@ -141,7 +141,7 @@ abstract class GP
 
     /**
      * Set country's currency.
-     * Accepted values are SGD, MYR, VND, and PHP.
+     * Accepted values are SGD, MYR, VND, PHP, and THB.
      *
      * @param string $currency Country currency
      */

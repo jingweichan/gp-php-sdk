@@ -192,14 +192,14 @@ $gp->refundTransaction($txID, $origTxID, $amount);
 ```php
 $gp->useProduction();
 ```
-### Defaults to SG. Accepted values are SG, MY, VN, and PH.
+### Defaults to SG. Accepted values are SG, MY, VN, PH, and TH.
 ```php
 /**
  * @param string $countryCode Country code (alpha-2)
  */
 $gp->setCountryCode($countryCode);
 ```
-### Defaults to SGD. Accepted values are SGD, MYR, VND, and PHP.
+### Defaults to SGD. Accepted values are SGD, MYR, VND, PHP, and THB.
 ```php
 /**
  * @param string $currency Currency
